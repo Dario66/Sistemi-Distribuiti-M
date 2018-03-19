@@ -1,0 +1,15 @@
+
+spring:
+  profiles: client
+  application:
+    name: client
+server:
+  port: 9001
+management.security.enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
